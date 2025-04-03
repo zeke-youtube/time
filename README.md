@@ -1,6 +1,8 @@
 # time
 a website that allow you to see time using         
+
 function updateTime() {
+
             let now = new Date();
             
             let date = now.toLocaleDateString();
