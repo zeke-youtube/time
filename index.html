@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time & Date</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Current Time & Date</h1>
+        <p id="datetime"></p>
+    </div>
+
+    <script>
+        function updateTime() {
+            let now = new Date();
+            let date = now.toLocaleDateString();
+            let time = now.toLocaleTimeString();
+            document.getElementById("datetime").innerHTML = date + " - " + time;
+        }
+
+        updateTime(); // Run immediately
+        setInterval(updateTime, 1000); // Update every second
+    </script>
+
+</body>
+</html>
